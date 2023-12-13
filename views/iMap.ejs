@@ -1,0 +1,25 @@
+<%- include('partials/header', { backgroundClass: 'default-background' }) %>
+<link rel="stylesheet" href="styles/styles_table.css">
+
+<!--Main-->
+<main class="container my-auto mx-auto items-center justify-center w-3/4 mt-24">
+  
+    <div class="rounded-2xl shadow-md">
+      <div class="relative">
+        <div class="items-center flex bg-customTrBlack2 p-4 rounded-t-2xl backdrop-blur-7">
+          <p class="ml-2">iMap</p>
+          <img src="../Z_Images/Immoly_ColorBar.png" alt="ColorBar" class="h-11 w-auto ml-auto mr-2 m-0.5">
+        </div>
+      </div>
+        <iframe src="../2_map_data/carte_suisse.html" width="100%" height="650px" frameborder="0" class="rounded-b-2xl my-auto mx-auto items-center justify-center"></iframe>
+    </div>
+    <div class="table__everything">
+      <%- include('partials/table') -%>
+    </div>
+
+
+
+</main>
+
+
+<%- include('partials/footer'); -%>

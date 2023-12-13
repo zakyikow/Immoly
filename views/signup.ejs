@@ -1,0 +1,174 @@
+<%- include('partials/header', { backgroundClass: 'default-background' }) %>
+
+
+
+<!--Main-->
+
+<main class="container my-auto mx-auto items-center">
+  <!--
+  <section class="flex flex-col items-center justify-center my-40 lg:my-52 mx-auto px-6 py-8 lg:py-0">
+      <div class="w-full md:mt-0 sm:max-w-md xl:p-0 bg-customTrWhite rounded-2xl backdrop-blur-mg border border-white border-width-1 border-opacity-20">
+          <div class="p-6 space-y-6 sm:p-8">
+              <h1 class="text-center justify-center font-bold leading-tight tracking-tight text-white text-2xl">
+                  Inscription
+              </h1>
+              <form class="space-y-6" action ="/signup" id="signup-form">
+                  <div>
+                      <label for="pseudo" class="block mb-2 text-sm font-medium text-white">Nom d'utilisateur</label>
+                      <input type="text" name="pseudo" id="pseudo" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Pseudo" required="">
+                      <div class="pseudo error  mt-8 ml-1 text-red-500"></div>
+                  </div>
+                  <div>
+                      <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
+                      <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="votrenom@email.com" required="">
+                      <div class="email error  mt-8 ml-1 text-red-500"></div>
+                  </div>
+                  <div>
+                      <label for="password" class="block mb-2 text-sm font-medium text-white">Mot de passe</label>
+                      <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                      <div class="password error  mt-8 ml-1 text-red-500"></div>
+                  </div>
+                  <div class="">
+                      <button type="submit" class="mt-3 mb-8 w-full text-black bg-white opacity-70 hover:opacity-100 focus:ring-4 focus:outline-none focus:ring-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center">S'inscrire</button>
+                      <p class="text-center font-light text-gray-500">
+                        <a href="/login" class="font-medium text-primary-500 hover:underline">Se connecter ici</a>
+                      </p>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </section> -->
+  
+  <section class="flex flex-col items-center justify-center my-40 lg:my-52 mx-auto px-6 py-8 lg:py-0">
+    <div class="w-full md:mt-0 sm:max-w-md xl:p-0 bg-customTrWhite rounded-2xl backdrop-blur-mg border border-white border-width-1 border-opacity-20">
+      <div class="p-8 space-y-6">
+        <h1 class="mb-10 text-center justify-center font-bold leading-tight tracking-tight text-white text-2xl">
+          Les inscriptions ne sont pas encore ouvertes.
+        </h1>
+        <h2 class="text-center justify-center text-xl leading-tight tracking-tight from-purple-700 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent">
+          Soyez le premier informé de notre lancement.
+        </h2>
+
+        <form class="space-y-6" action="" id="newsletter-form">
+          <div class="mt-10">
+            <label for="newsletter-name" class="block mb-2 text-sm font-medium text-white">Nom</label>
+            <input type="newsletter-name" name="newsletter-name" id="newsletter-name" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="votrenom" required="">
+          </div>
+          <div class="">
+              <label for="newsletter-email" class="block mb-2 text-sm font-medium text-white">Email</label>
+              <input type="email" name="newsletter-email" id="newsletter-email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="votrenom@email.com" required="">
+          </div>
+
+          <div id="success-message" style="display: none;" class="w-full text-black bg-green-200 font-medium rounded-lg text-sm px-5 py-3 text-center">Inscription réussie!</div>
+          <div id="error-message" style="display: none;" class="w-full text-black bg-red-400 font-medium rounded-lg text-sm px-5 py-3 text-center">Échec de l'inscription.</div>
+          
+          <div class="">
+              <button type="submit" class="mt-2 w-full text-black bg-white opacity-70 hover:opacity-100 focus:ring-4 focus:outline-none focus:ring-primary-800 font-medium rounded-lg text-sm px-5 py-3 text-center">S'inscrire à la newsletter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+</main>
+
+
+
+<%- include('partials/footer'); -%>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const newsletterForm = document.getElementById('newsletter-form');
+      const successMessage = document.getElementById('success-message');
+      const errorMessage = document.getElementById('error-message');
+
+      newsletterForm.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          const nameInput = document.getElementById('newsletter-name');
+          const emailInput = document.getElementById('newsletter-email');
+
+          const name = nameInput.value;
+          const email = emailInput.value;
+
+          try {
+            const response = await fetch('/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                successMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+                successMessage.textContent = data.message;
+                nameInput.value = '';
+                emailInput.value = '';
+            } else {
+                errorMessage.style.display = 'block';
+                successMessage.style.display = 'none';
+                errorMessage.textContent = data.message;
+
+                // Ajoutez cette condition pour traiter le message d'erreur spécifique
+                if (data.message === 'Cet email est déjà inscrit à la newsletter.') {
+                    // Faites quelque chose spécifique pour ce message d'erreur
+                    // Par exemple, vous pourriez changer la couleur du message ou afficher un avertissement supplémentaire.
+                }
+            }
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi de la requête:', error);
+        }
+    });
+  });
+</script>
+<!--Script-->
+<script>
+  const form = document.querySelector('form');
+  const pseudoError = document.querySelector('.pseudo.error');
+  const emailError = document.querySelector('.email.error');
+  const passwordError = document.querySelector('.password.error');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // reset errors
+    pseudoError.textContent = '';
+    emailError.textContent = '';
+    passwordError.textContent = '';
+
+    // get values
+    const pseudo = form.pseudo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    try {
+      const res = await fetch('/signup', { 
+        method: 'POST', 
+        body: JSON.stringify({ pseudo, email, password }),
+        headers: {'Content-Type': 'application/json'}
+      });
+
+      const data = await res.json();
+      console.log(data);
+      if (data.errors) {
+        pseudoError.textContent = data.errors.pseudo;
+        emailError.textContent = data.errors.email;
+        passwordError.textContent = data.errors.password;
+      }
+      if (data.user) {
+        location.assign('/iMap');
+      }
+
+    }
+    catch (err) {
+      console.log(err);
+    }
+    
+  });
+</script>

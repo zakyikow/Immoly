@@ -1,0 +1,54 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap');
+.font-satoshi {
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Rend la transition fluide quand on appuie sur un bouton*/
+html, body {
+    scroll-behavior: smooth;
+  }
+
+
+/* Pour la classe background par défaut */
+.default-background {
+    background-image: url('../Z_Images/backgrounds/HD/Sober_BG_FULL.png');
+
+    background-size: auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.index-background {
+    background-image:
+        url('../Z_Images/backgrounds/HD/BG_FULL0_HD.png'),
+        url('../Z_Images/backgrounds/HD/BG_FULL0_HD_ReverseSober.png');
+        
+    background-size: auto;
+    background-repeat: no-repeat;
+    /*sm*/
+    background-position: center top, center bottom -38%;
+}
+/*md*/
+@media (min-width: 768px) {
+    .index-background {
+        background-position: center top, center bottom -125%; /*-2399px*/
+    }
+}
+/*lg*/
+@media (min-width: 1024px) {
+    .index-background {
+        background-position: center top, center bottom -707%; /*-3783px*/
+    }
+}
+/*xl*/
+@media (min-width: 1280px) {
+    .index-background {
+        background-position: center top, center bottom -1204%; /*-3986px*/
+    }
+}
+/*2xl*/
+@media (min-width: 1536px) {
+    .index-background {
+        background-position: center top, center bottom -1593%;
+    }
+}

@@ -1,0 +1,27 @@
+
+<section class="table">
+
+    <section class="table__header">
+        <h1>iMap's Table</h1>
+        <div class="input-group">
+            <input type="search" placeholder="Recherche">
+            <img src="../Z_Images/search.png" alt="Magnifying glass image">
+        </div>
+    </section>
+
+    <section class="table__body">
+        <table>
+            <thead>
+                <tr>
+                    <th> Commune <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Canton <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Location mensuelle m2 <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Prix d'achat m2 <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> ROI (%) <span class="icon-arrow">&UpArrow;</span></th>
+                </tr>
+            </thead>
+            <%- include('../../3_table_data/table_html.html') -%>
+        </table>
+    </section>
+
+</section>
