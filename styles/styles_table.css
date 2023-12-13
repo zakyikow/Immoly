@@ -1,0 +1,280 @@
+
+/* Responsive HTML Table With Pure CSS - Web Design/UI Design */
+/*
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+}*/
+/*
+body {
+    min-height: 100vh;
+    background: url(/views/images/html_table.jpg) center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.table__everything {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+    
+}
+
+section.table {
+    width: 82vw;
+    height: auto;
+    background-color: rgba(3, 3, 3, 0.644);
+
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: 1rem;
+
+    overflow: hidden;
+}
+
+.table__header img {
+    filter: invert(100%);
+    opacity: 0.3;
+}
+
+.table__header {
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(43, 43, 43, 0.445);
+    padding: .8rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table__header .input-group {
+    width: 35%;
+    height: 100%;
+    background-color: #121212;
+    opacity: 0.8;
+    padding: 0 .8rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .2s;
+}
+
+.table__header .input-group:hover {
+    width: 45%;
+    background-color: #121212;
+    opacity: 1;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.table__header .input-group input {
+    width: 100%;
+    padding: 0 .5rem 0 .3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.table__header .input-group input::placeholder {
+    color: #ffffffd8;
+    opacity: 0.4;
+    font-size: 0.9rem;
+}
+
+
+.table__body {
+    width: 95%;
+    max-height: 52rem;
+    background-color: rgba(36, 36, 36, 0.733);
+
+    margin: 1rem auto;
+    border-radius: .6rem;
+
+    overflow: auto;
+    overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+/* Aligne la dernière colonne au centre */
+td:last-child {
+    text-align: center;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000002a;
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #00000050 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+.colorROI {
+    display: inline-flex;
+
+
+    padding: .2rem 1.2rem;
+    border-radius: 2rem;
+
+    font-weight: bold;
+}
+
+.colorROI.bad {
+    background-color: #ff0000;
+    color: #000000;
+}
+
+.colorROI.notgood {
+    background-color: #ffa700;
+    color: #000000;
+}
+
+.colorROI.okay {
+    background-color: #fff400;
+    color: #000000;
+}
+
+.colorROI.commun {
+    background-color: #99ff00;
+    color: #000000;
+}
+
+.colorROI.good {
+    background-color: #2cba00;
+    color: #000000;
+}
+
+.colorROI.excellent {
+    background-color: #17c1ff;
+    color: #000000;
+}
+
+@media (max-width: 1000px) {
+    td:not(:first-of-type) {
+        min-width: 6rem;
+    }
+}
+
+thead th span.icon-arrow {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+    
+    text-align: center;
+    font-size: 1rem;
+    
+    margin-left: .5rem;
+    transition: .2s ease-in-out;
+}
+
+thead th:hover span.icon-arrow{
+    border: 1.4px solid #641cff;
+}
+
+thead th:hover {
+    color: #641cff;
+}
+
+thead th.active span.icon-arrow{
+    background-color: #641cff;
+    color: #fff;
+}
+
+thead th.asc span.icon-arrow{
+    transform: rotate(180deg);
+}
+
+thead th.active,theader td.active {
+    color: #641cff;
+}
+
+/* Changer la couleur de l'icône de croix*/
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23777'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+    cursor: pointer;
+  }
