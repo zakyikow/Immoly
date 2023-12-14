@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const jwt = require('jsonwebtoken');
-require('dotenv').config({ path: '../S_KEYS/.env' });
+require('dotenv').config({ path: './S_KEYS/.env' });
 
 
 // handle errors
