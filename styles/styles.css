@@ -23,10 +23,10 @@ html, body {
         url('../Z_Images/backgrounds/HD/BG_FULL0_HD.png'),
         url('../Z_Images/backgrounds/HD/BG_FULL0_HD_ReverseSober.png');
         
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     /*sm*/
-    background-position: center top, center bottom -38%;
+    background-position: center top, center bottom;
 }
 /*md*/
 @media (min-width: 768px) {
