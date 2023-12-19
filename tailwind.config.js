@@ -13,6 +13,7 @@ module.exports = {
         customTrBlack2: 'rgba(36, 36, 36, 0.733)',
         customTrWhite: 'rgba( 239, 239, 239, 0.15)',
         customTrWhite2: 'rgba( 239, 239, 239, 0.7)',
+        customGray: 'rgba(49,49,49,255)',
       },
       fontSize: {
         'xs': '0.8rem', //text-xs
