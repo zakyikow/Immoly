@@ -1025,7 +1025,7 @@ video {
 }
 
 .bg-customPurple {
-  background-color: rgba(58,14,111,255);
+  background-color: rgba(53,14,101,255);
 }
 
 .bg-customTrBlack2 {
@@ -1438,7 +1438,7 @@ video {
 }
 
 .hover\:shadow-customPurple:hover {
-  --tw-shadow-color: rgba(58,14,111,255);
+  --tw-shadow-color: rgba(53,14,101,255);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
