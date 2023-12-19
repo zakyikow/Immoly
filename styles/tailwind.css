@@ -1561,6 +1561,10 @@ video {
     padding-right: 1rem;
   }
 
+  .sm\:text-left {
+    text-align: left;
+  }
+
   .sm\:text-4\.5xl {
     font-size: 2.75rem;
   }
@@ -1744,6 +1748,10 @@ video {
   .md\:py-3\.5 {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
+  }
+
+  .md\:text-justify {
+    text-align: justify;
   }
 
   .md\:text-5xl {
