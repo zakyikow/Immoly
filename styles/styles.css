@@ -14,16 +14,11 @@ html, body {
 .default-background {
     background-image: url('../Z_Images/backgrounds/HD/Sober_BG_FULL.png');
 
-    background-size: auto;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
 }
-/*xl*/
-@media (min-width: 1280px) {
-    .default-background {
-        background-size: cover;
-    }
-}
+
 
 .index-background {
     background-image:
