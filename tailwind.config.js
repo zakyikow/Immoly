@@ -14,7 +14,7 @@ module.exports = {
         customTrWhite: 'rgba( 239, 239, 239, 0.15)',
         customTrWhite2: 'rgba( 239, 239, 239, 0.7)',
         customGray: 'rgba(49,49,49,255)',
-        customPurple: 'rgba(58,14,111,255)',
+        customPurple: 'rgba(53,14,101,255)',
       },
       fontSize: {
         'xs': '0.8rem', //text-xs
