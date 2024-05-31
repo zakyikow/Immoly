@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 
 // database connection
-const dbURI = 'mongodb+srv://immolyapp:Yn9sL66XphqL9Y33@immoly0.phlerav.mongodb.net/immolyauthentication';
+const dbURI = process.env.DBURI;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(5500))
   .catch((err) => console.log(err));
