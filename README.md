@@ -18,6 +18,12 @@ Immoly was a SaaS platform dedicated to simplifying property investment decision
    - *Exporting the Map to HTML*:
      Exported the interactive map to HTML format for easy visualization.
 
+5. **Front End**:
+   - Built using HTML/CSS with the utilization of Tailwind CSS for enhanced styling.
+
+6. **Back End**:
+   - Developed using JavaScript with Node.js, providing robust functionality to support the platform's operations.
+
 ## Features
 
 ### iMap
