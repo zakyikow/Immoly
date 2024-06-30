@@ -2,10 +2,12 @@
 
 Immoly was a SaaS platform dedicated to simplifying property investment decisions for optimal returns in the Swiss real estate market. Its intuitive interface facilitated effortless comparisons of rental and purchase prices per square meter across 200 municipalities. Additionally, Immoly meticulously calculated the Return on Investment (ROI), pinpointing the most lucrative investment opportunities.
 
-<img src="./Z_Images/preview_images/Immoly_SS1.jpg" alt="Immoly_LandingPage" width="100%">
-<div style="display: flex; justify-content: space-between;">
-   <img src="./Z_Images/preview_images/Immoly_SS2.jpg" alt="Immoly_iMap" width="49.7%">
-   <img src="./Z_Images/preview_images/Immoly_SS3.jpg" alt="Immoly_Table" width="49.7%">
+<div>
+   <img src="./Z_Images/preview_images/Immoly_SS1.jpg" alt="Immoly_LandingPage" width="100%">
+   <div style="display: flex; justify-content: space-between;">
+      <img src="./Z_Images/preview_images/Immoly_SS2.jpg" alt="Immoly_iMap" width="49.7%">
+      <img src="./Z_Images/preview_images/Immoly_SS3.jpg" alt="Immoly_Table" width="49.7%">
+   </div>
 </div>
 
 ## How It Worked
