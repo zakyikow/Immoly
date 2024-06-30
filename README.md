@@ -22,7 +22,7 @@ Immoly was a SaaS platform dedicated to simplifying property investment decision
    - Built using HTML/CSS with the utilization of Tailwind CSS for enhanced styling.
 
 6. **Back End**:
-   - Developed using JavaScript with Node.js, providing robust functionality to support the platform's operations.
+   - Developed using JavaScript with Node.js and MongoDB, providing robust functionality to support the platform's operations and user authentication.
 
 ## Features
 
