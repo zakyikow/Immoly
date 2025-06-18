@@ -13,10 +13,10 @@ Immoly was a SaaS platform dedicated to simplifying property investment decision
 ## How It Worked
 
 1. **Data Collection**:
-   - Scraped real estate listings from multiple Swiss property websites using custom scripts.
+   - Scraped real estate listings from multiple Swiss property websites.
 
 2. **Data Processing and Analysis**:
-   - Used Python within Jupyter Notebooks to clea and analyze the scraped data.
+   - Used Python within Jupyter Notebooks to clean and analyze the scraped data.
    - Calculated relevant metrics (average price per m², ROI, etc.).
    - Exported the processed results as CSV files for further use.
 
