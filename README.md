@@ -13,23 +13,22 @@ Immoly was a SaaS platform dedicated to simplifying property investment decision
 ## How It Worked
 
 1. **Data Collection**:
-   - Scraped data from various real estate listing websites.
+   - Scraped real estate listings from multiple Swiss property websites using custom scripts.
 
-3. **Data Cleaning and Organization**:
-   - Utilized Python with libraries like Pandas for data cleaning and organization in Jupyter Notebooks.
+2. **Data Processing and Analysis**:
+   - Used Python within Jupyter Notebooks to clea and analyze the scraped data.
+   - Calculated relevant metrics (average price per m², ROI, etc.).
+   - Exported the processed results as CSV files for further use.
 
-4. **Visualization**:
-   - *Linking Municipalities to Shapes*:
-     Linked the cleaned CSV to a publicly available GeoJSON file containing the shapes of every municipality in Switzerland.
-   - *Creating the Map*:
-     Used Leaflet to generate an interactive map from the GeoJSON.
-   - *Exporting the Map to HTML*:
-     Exported the interactive map to HTML format for easy visualization.
+3. **Geospatial Visualization**:
+   - Linking Data to Geography: Mapped the cleaned data to municipalities using a public GeoJSON file containing the shapes of all Swiss municipalities.
+   - Interactive Map Creation: Used Leaflet.js to build an interactive map displaying the data at the municipal level.
+   - Map Export: Exported the resulting interactive map to an HTML file for easy sharing and visualization.
 
-5. **Front End**:
+4. **Front End**:
    - Built using HTML/CSS with the utilization of Tailwind CSS for enhanced styling.
 
-6. **Back End**:
+5. **Back End**:
    - Developed using JavaScript with Node.js and MongoDB, providing robust functionality to support the platform's operations and user authentication.
 
 ## Features
