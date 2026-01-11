@@ -11,7 +11,9 @@
 
 </div>
 
----
+#
+
+<br>
 
 ## 📖 Overview
 
@@ -27,6 +29,8 @@ Immoly was a SaaS platform designed to simplify property investment decisions in
 </div>
 
 ---
+
+<br>
 
 ## 🔧 Technical Architecture
 
