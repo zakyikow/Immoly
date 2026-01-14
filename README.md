@@ -17,7 +17,9 @@
 
 ## 📖 Overview
 
-Immoly was a SaaS platform designed to simplify property investment decisions in the Swiss real estate market. By aggregating and analyzing listing data from multiple sources, it provided investors with comparative insights into rental yields, purchase prices, and ROI across Switzerland's diverse municipal landscape.
+Immoly was a SaaS platform designed to simplify property investment decisions in the Swiss real estate market. By aggregating and analyzing listing data from multiple sources, it provided investors with comparative insights across Switzerland's diverse municipal landscape.
+
+The platform's core value proposition centered on calculating Return on Investment (ROI) by comparing average purchase prices per square meter against average rental prices per square meter for each municipality. This ratio-based approach enabled investors to identify municipalities where rental income potential was strongest relative to acquisition costs, highlighting opportunities for cash-flow positive investments across 200+ Swiss municipalities.
 
 <div align="center">
    <img src="./Z_Images/preview_images/Immoly_SS1.jpg" alt="Immoly Landing Page" width="100%">
@@ -29,8 +31,6 @@ Immoly was a SaaS platform designed to simplify property investment decisions in
 </div>
 
 ---
-
-<br>
 
 ## 🔧 Technical Architecture
 
